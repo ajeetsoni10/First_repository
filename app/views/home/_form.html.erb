@@ -1,0 +1,14 @@
+ <%= form_for (@pet) do |f| %>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+    <%= f.label :marks1 %><br>
+    <%= f.text_field :marks1%>
+	 <%= f.label :marks2%><br>
+    <%= f.text_field :marks2 %>
+	 <%= f.label :projects %><br>
+    <%= f.text_field :projects%>
+
+  <div class='actions'>
+    <%= f.submit %>
+  </div>
+ <% end %>

@@ -1,0 +1,47 @@
+		<script>
+		$(document).ready(function () {
+		$('#new_pet').validate({
+		debug: true,
+		rules: {
+		“pets[name]“: {required: true, name: true},
+		“pets[marks1]“: {required: true, minlength: 2},
+		“pets[marks2]“: {required: true, minlength:  2}
+		“pets[projects]“: {required: true, minlength: 50}
+		“pets[upload]“: {required: true}
+		}
+		});
+		});
+</script>	
+	<%= form_for :pet do |f| %>
+	<p> 
+ 	<%= f.label :name %><br>
+    <%= f.text_field :name%><br>
+    </p>
+    
+    <p>
+    <%= f.label :marks1 %><br>
+    <%= f.text_field :marks1%><br>
+    </p>
+    
+   
+    <p>
+	<%= f.label :marks2%><br>
+    <%= f.text_field :marks2 %><br>
+    </p>
+    
+
+    <p>
+	<%= f.label :projects %><br>
+    <%= f.text_field :projects%><br>
+    </p>
+    
+   
+    <p>
+    <%= f.label :upload%><br>
+    <%= f.file_field :upload%><br>
+    </p>
+    
+	<%= f.submit  'click' %>
+ 	<% end %>
+ 	
+
